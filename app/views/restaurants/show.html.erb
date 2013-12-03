@@ -1,0 +1,19 @@
+<h1><%= @restaurant.name %></h1>
+
+<%= form_for [@restaurant, @review] do |f| %>
+  <%= f.label :content, 'Review' %>
+  <%= f.text_area :content %>
+
+  <%= f.label :rating %>
+  <%= f.text_field :rating %>
+
+  <%= f.submit 'Submit' %>
+<% end %>
+
+<span class='rating'>
+  <%= star_rating @restaurant.average_rating %>
+</span>
+
+<% @restaurant.reviews.each do |review| %>
+  <%= review.content %>
+<% end %>
