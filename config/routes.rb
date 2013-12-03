@@ -1,7 +1,5 @@
 YelpClone::Application.routes.draw do
-  get "reviews/create"
-  get "restaurants/new"
-  get "restaurants/index"
+  
   resources :restaurants do
     resources :reviews
   end
