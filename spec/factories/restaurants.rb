@@ -2,7 +2,8 @@
 
 FactoryGirl.define do
   factory :restaurant do
-    name "MyString"
+    name "Restaurant"
     description "MyText"
+    owner_email "a@a.com"
   end
 end

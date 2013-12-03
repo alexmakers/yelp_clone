@@ -1,7 +1,15 @@
 YelpClone::Application.routes.draw do
-  
-  resources :restaurants do
-    resources :reviews
+
+  constraints subdomain: 'api' do
+    namespace :api, path: '', defaults: { format: :json } do
+      resources :restaurants
+    end
+  end
+
+  constraints subdomain: false do
+    resources :restaurants do
+      resources :reviews
+    end
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
