@@ -40,6 +40,7 @@ group :development, :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'shoulda-matchers'
+  gem 'capybara-email'
 end
 
 # Use ActiveModel has_secure_password

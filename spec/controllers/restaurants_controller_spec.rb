@@ -11,8 +11,7 @@ describe RestaurantsController do
 
   describe "GET 'index'" do
     it "returns http success" do
-      get 'index'
-      response.should be_success
+      expect(foobar).to eq 1
     end
   end
 
