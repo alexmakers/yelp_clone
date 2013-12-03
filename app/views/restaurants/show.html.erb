@@ -13,7 +13,10 @@
 <span class='rating'>
   <%= star_rating @restaurant.average_rating %>
 </span>
+<br>
 
-<% @restaurant.reviews.each do |review| %>
-  <%= review.content %>
-<% end %>
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li><%= review.content %></li>
+  <% end %>
+</ul>
