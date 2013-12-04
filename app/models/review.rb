@@ -3,7 +3,6 @@ class Review < ActiveRecord::Base
   after_create :send_owner_email
 
   def send_owner_email
-    mail = ReviewMailer.notify_owner(restaurant.owner_email, self)
-    mail.deliver
+    ReviewMailer.notify_owner(restaurant.owner_email, self).deliver
   end
 end
