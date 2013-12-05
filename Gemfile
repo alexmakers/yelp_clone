@@ -32,6 +32,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'geocoder'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'cucumber-rails', require: false
