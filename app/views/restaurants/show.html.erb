@@ -1,5 +1,7 @@
 <h1><%= @restaurant.name %></h1>
 
+<div id='map' data-id="<%= @restaurant.id %>"></div>
+
 <%= form_for [@restaurant, @review] do |f| %>
   <%= f.label :content, 'Review' %>
   <%= f.text_area :content %>

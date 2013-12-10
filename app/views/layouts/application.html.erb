@@ -8,6 +8,8 @@
 <body>
 
 <%= yield %>
+<%= javascript_include_tag "http://maps.google.com/maps/api/js?sensor=true
+", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
 </html>
